@@ -6,10 +6,10 @@ export default function BackButton() {
 
     return (
         <button
-            className="hover:opacity-98 dark flex items-center justify-center rounded bg-white px-6 py-3 shadow-sm hover:bg-gray-50 dark:bg-gray-800"
-            onClick={() => router.push('/')}
+            className="flex items-center justify-center px-6 py-3 bg-white rounded shadow-sm hover:opacity-98 dark hover:bg-gray-50 dark:bg-gray-800"
+            onClick={() => router.back()}
         >
-            <ArrowLeftIcon className="mr-3 h-5 w-5" aria-hidden="true" />{' '}
+            <ArrowLeftIcon className="w-5 h-5 mr-3" aria-hidden="true" />{' '}
             <p className="font-medium">Back</p>
         </button>
     );

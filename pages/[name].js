@@ -1,36 +1,43 @@
 import { useRouter } from 'next/router';
-import useSWR from 'swr';
 import { Layout } from '../layouts';
 import { BackButton, CountryDetails } from '../components';
-import fetcher from '../utils/fetcher';
 
-export default function Country() {
+export default function Country(props) {
     const router = useRouter();
-    const { name } = router.query;
 
-    const { data, error } = useSWR(
-        `https://restcountries.com/v3.1/name/${name}?fullText=true`,
-        fetcher
-    );
+    if (router.isFallback) {
+        return <Layout>Loading...</Layout>;
+    }
 
     return (
         <Layout>
-            {error ? (
-                <div>Something went wrong! failed to load</div>
-            ) : (
-                <>
-                    <div className="mb-10">
-                        <BackButton />
-                    </div>
-                    <div className="mb-10">
-                        {!data ? (
-                            <div>loading...</div>
-                        ) : (
-                            <CountryDetails country={data} />
-                        )}
-                    </div>
-                </>
-            )}
+            <div className="mb-10">
+                <BackButton />
+            </div>
+            <div className="mb-10">
+                <CountryDetails country={props.data} />
+            </div>
         </Layout>
     );
 }
+
+export const getStaticPaths = async () => {
+    const res = await fetch(`https://restcountries.com/v3.1/all`);
+    const data = await res.json();
+
+    return {
+        fallback: false,
+        paths: data.map((country) => ({
+            params: { name: country.name.common },
+        })),
+    };
+};
+
+export const getStaticProps = async (context) => {
+    const res = await fetch(
+        `https://restcountries.com/v3.1/name/${context.params.name}?fullText=true`
+    );
+    const data = await res.json();
+
+    return { props: { data } };
+};
