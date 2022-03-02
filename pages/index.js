@@ -61,7 +61,7 @@ export default function Home(props) {
                     <div>
                         <p className="text-lg italic">
                             No countries with{' '}
-                            <span className="font-medium">"{query}"</span>{' '}
+                            <span className="font-medium">{query}</span>{' '}
                             found.
                         </p>
                     </div>
