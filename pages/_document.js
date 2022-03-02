@@ -2,9 +2,8 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
     return (
-        <Html lang="en">
+        <Html lang="en" title="Where in the world?">
             <Head>
-                <title>Where in the world?</title>
                 <meta name="robots" content="follow, index" />
                 <meta content="Where in the world?" name="description" />
             </Head>

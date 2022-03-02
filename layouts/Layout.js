@@ -8,7 +8,7 @@ export default function Layout({ children }) {
 
     return (
         <div>
-            <nav className="bg-white shadow dark:bg-gray-800">
+            <nav role="navigation" className="bg-white shadow dark:bg-gray-800">
                 <div className="mx-auto max-w-7xl px-4 sm:px-4 lg:px-8">
                     <div className="relative flex h-16 items-center justify-between">
                         <Link href="/">
