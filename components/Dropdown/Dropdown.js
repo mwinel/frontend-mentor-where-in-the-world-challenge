@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/solid';
-import classNames from '../../utils/classNames';
+import classNames from '../../utils/classnames';
 
 export default function Dropdown({ data, selected, setSelected, placeholder }) {
     return (
