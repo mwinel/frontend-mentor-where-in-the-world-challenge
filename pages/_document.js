@@ -4,6 +4,7 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head>
+                <title>Where in the world?</title>
                 <meta name="robots" content="follow, index" />
                 <meta content="Where in the world?" name="description" />
             </Head>
