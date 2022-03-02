@@ -11,11 +11,10 @@ const regions = [
 ];
 
 export default function Home(props) {
-    const [countries, setCountries] = useState(props.data);
     const [query, setQuery] = useState('');
     const [selected, setSelected] = useState(null);
 
-    const filteredCountries = countries.filter((item) => {
+    const filteredCountries = props.data.filter((item) => {
         return item.name.common.toLowerCase().includes(query.toLowerCase());
     });
 
@@ -25,7 +24,7 @@ export default function Home(props) {
 
     return (
         <Layout>
-            <div className="flex items-center justify-between mb-10">
+            <div className="mb-10 flex items-center justify-between">
                 <Search query={query} onQueryChange={handleSearch} />
                 <Dropdown
                     data={regions}
@@ -35,11 +34,7 @@ export default function Home(props) {
                 />
             </div>
             <div className="mb-10">
-                {!countries ? (
-                    <div>loading...</div>
-                ) : (
-                    <Countries countries={filteredCountries} />
-                )}
+                <Countries countries={filteredCountries} />
             </div>
         </Layout>
     );
