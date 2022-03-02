@@ -2,7 +2,7 @@ import { SearchIcon } from '@heroicons/react/outline';
 
 export default function Search({ query, onQueryChange }) {
     return (
-        <div className="w-[400px]">
+        <div className="w-full md:w-[400px]">
             <div className="relative mt-1 rounded-md shadow-md">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-5 pointer-events-none">
                     <SearchIcon

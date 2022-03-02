@@ -7,7 +7,7 @@ export default function CountryDetails({ country }) {
                 return (
                     <div
                         key={item.name.common}
-                        className="grid items-center grid-cols-1 gap-20 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2"
+                        className="grid grid-cols-1 items-center gap-6 sm:grid-cols-2 md:grid-cols-2 md:gap-20 lg:grid-cols-2"
                     >
                         <Image
                             className="object-cover object-center"
@@ -21,7 +21,7 @@ export default function CountryDetails({ country }) {
                             <h2 className="text-4xl font-bold text-gray-800 dark:text-white">
                                 {item.name.common}
                             </h2>
-                            <div className="grid grid-cols-1 gap-8 mt-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
+                            <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
                                 <div className="text-gray-700 dark:text-gray-200">
                                     <p className="leading-7">
                                         <span className="font-medium">
@@ -100,7 +100,7 @@ export default function CountryDetails({ country }) {
                                         : item.borders.map((border) => (
                                               <span
                                                   key={border}
-                                                  className="px-4 py-1 mr-2 text-xs bg-white rounded shadow cursor-pointer dark:bg-gray-800"
+                                                  className="mr-2 cursor-pointer rounded bg-white px-4 py-1 text-xs shadow dark:bg-gray-800"
                                               >
                                                   {border}
                                               </span>

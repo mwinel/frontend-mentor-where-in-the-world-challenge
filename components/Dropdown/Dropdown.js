@@ -9,7 +9,7 @@ export default function Dropdown({ data, selected, setSelected, placeholder }) {
             <Listbox value={selected} onChange={setSelected}>
                 {({ open }) => (
                     <>
-                        <div className="relative w-64">
+                        <div className="relative w-full md:w-64">
                             <Listbox.Button className="relative w-full cursor-default rounded border border-white bg-white py-3 pl-5 pr-12 text-left shadow-md focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:border-gray-800 dark:bg-gray-800">
                                 <span className="block truncate font-medium text-gray-800 dark:text-white">
                                     {selected ? selected.name : placeholder}
