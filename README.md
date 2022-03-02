@@ -1,6 +1,6 @@
-# Frontend Mentor - Todo app solution
+# Frontend Mentor - Whhere in the world? solution
 
-This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Whhere in the world?](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca/hub/rest-countries-api-with-color-theme-switcher-jvIXwWdVS). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -11,7 +11,6 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
     -   [Built with](#built-with)
     -   [What I learned](#what-i-learned)
     -   [Continued development](#continued-development)
-    -   [Useful resources](#useful-resources)
 -   [Author](#author)
 -   [Acknowledgments](#acknowledgments)
 
@@ -19,22 +18,21 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 
 ### The challenge
 
+Integrate with the REST Countries API to pull country data and display it like in the designs.
+
 Users should be able to:
 
--   View the optimal layout for the app depending on their device's screen size
--   See hover states for all interactive elements on the page
--   Add new todos to the list
--   Mark todos as complete
--   Delete todos from the list
--   Filter by all/active/complete todos
--   Clear all completed todos
--   Toggle light and dark mode
--   **Bonus**: Drag and drop to reorder items on the list
+- See all countries from the API on the homepage
+- Search for a country using an input field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode (optional)
 
 ### Links
 
 -   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Live Site URL: [Add live site URL here](https://frontend-mentor-where-in-the-world-challenge.vercel.app/)
 
 ## My process
 
@@ -46,16 +44,11 @@ Users should be able to:
 
 ### What I learned
 
-In this challenge I got to learn how to drag and drop to reorder items on the list.
+In this challenge I got a chance to work with the next `getStatciProps` to fetch data from the API.
 
 ### Continued development
 
 Thoughts still coming up...
-
-### Useful resources
-
--   [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
--   [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
